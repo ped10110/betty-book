@@ -9,13 +9,13 @@ export const Route = createFileRoute("/book")({
       {
         name: "description",
         content:
-          "Influence Without Authority by Betty Adera. A practical guide to leading even when you don't have a title. Digital and physical editions available — KES 1,500 / ~$15 USD.",
+          "Influence Without Authority by Betty Adera. A practical guide to leading even when you don't have a title. Physical copy — KES 1,500 / ~$15 USD, plus delivery outside Nairobi.",
       },
       { property: "og:title", content: "Influence Without Authority — Betty Adera" },
       {
         property: "og:description",
         content:
-          "Birthing the next generation of women leaders through mentorship. Order the digital or physical edition — M-Pesa and card accepted.",
+          "Birthing the next generation of women leaders through mentorship. Order your printed copy — M-Pesa and card accepted.",
       },
       { property: "og:image", content: bookImg },
     ],
@@ -47,7 +47,7 @@ function BookPage() {
             className="book-shadow relative w-full"
           />
           <p className="mt-6 text-center text-xs uppercase tracking-[0.25em] text-cream/50">
-            Print edition · Digital edition (PDF + ePub)
+            Print edition only
           </p>
         </div>
 
@@ -90,48 +90,33 @@ function BookPage() {
         <div className="text-center">
           <span className="eyebrow">Get your copy</span>
           <h2 className="mt-3 font-serif text-3xl text-cream md:text-4xl">
-            Two ways to read it.
+            Order the printed book.
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-cream/70">
-            KES 1,500 / ~$15 USD · One-time payment · No subscription. M-Pesa, Visa and Mastercard
-            accepted through secure Flutterwave checkout.
+            KES 1,500 / ~$15 USD · Physical copy only · One-time payment. M-Pesa, Visa and
+            Mastercard accepted through secure Flutterwave checkout.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <article className="flex flex-col rounded-sm border border-cream/10 bg-card/40 p-8">
-            <span className="eyebrow text-gold-soft">Digital · Instant</span>
-            <h3 className="mt-2 font-serif text-2xl text-cream">Digital Copy</h3>
-            <p className="mt-1 text-sm text-cream/60">KES 1,500 / ~$15 USD</p>
-            <ul className="mt-5 space-y-2 text-sm text-cream/80">
-              <li>✓ Full book in PDF format</li>
-              <li>✓ ePub for phones &amp; e-readers</li>
-              <li>✓ Instant delivery to your email</li>
-              <li>✓ Lifetime access — read anywhere</li>
-            </ul>
-            <a
-              href="mailto:bettyadera@gmail.com?subject=Order%20-%20Influence%20Without%20Authority%20(Digital)&body=Hi%20Betty%2C%20I%27d%20like%20to%20order%20the%20digital%20edition%20of%20Influence%20Without%20Authority.%20Please%20share%20payment%20details."
-              className="mt-8 inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-medium text-primary-foreground transition hover:bg-gold-soft"
-            >
-              Order Digital Copy →
-            </a>
-          </article>
-
-          <article className="flex flex-col rounded-sm border border-cream/10 bg-card/40 p-8">
+        <div className="mt-10 flex justify-center">
+          <article className="flex w-full max-w-md flex-col rounded-sm border border-cream/10 bg-card/40 p-8">
             <span className="eyebrow text-gold-soft">Physical · Delivered</span>
-            <h3 className="mt-2 font-serif text-2xl text-cream">Physical Copy</h3>
+            <h3 className="mt-2 font-serif text-2xl text-cream">Printed Copy</h3>
             <p className="mt-1 text-sm text-cream/60">KES 1,500 / ~$15 USD</p>
             <ul className="mt-5 space-y-2 text-sm text-cream/80">
               <li>✓ Printed &amp; bound book</li>
-              <li>✓ Free delivery within Nairobi CBD</li>
-              <li>✓ Outside CBD delivery available</li>
+              <li>✓ Free delivery within Nairobi</li>
+              <li>✓ KES 300 delivery charge outside Nairobi</li>
               <li>✓ Dispatched within 2–3 business days</li>
             </ul>
+            <p className="mt-5 text-xs text-cream/50">
+              You'll be asked for your delivery address when ordering.
+            </p>
             <a
-              href="mailto:bettyadera@gmail.com?subject=Order%20-%20Influence%20Without%20Authority%20(Physical)&body=Hi%20Betty%2C%20I%27d%20like%20to%20order%20the%20physical%20edition%20of%20Influence%20Without%20Authority.%20My%20delivery%20address%20is%3A"
-              className="mt-8 inline-flex items-center justify-center rounded-full border border-gold/60 px-6 py-3 text-sm font-medium text-gold transition hover:bg-gold hover:text-primary-foreground"
+              href="mailto:bettyadera@gmail.com?subject=Order%20-%20Influence%20Without%20Authority%20(Physical)&body=Hi%20Betty%2C%20I%27d%20like%20to%20order%20a%20printed%20copy%20of%20Influence%20Without%20Authority.%0A%0AFull%20delivery%20address%3A%0ACity%2FTown%3A%0APhone%20number%3A"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-medium text-primary-foreground transition hover:bg-gold-soft"
             >
-              Order Physical Copy →
+              Order Your Copy →
             </a>
           </article>
         </div>
@@ -148,10 +133,10 @@ function BookPage() {
         <h2 className="font-serif text-3xl text-cream">Frequently asked</h2>
         <div className="mt-6 divide-y divide-cream/10 border-y border-cream/10">
           {[
-            ["How will I receive the book?", "After successful payment, you'll receive an email with download links for both the PDF and ePub versions. Usually instant, but may take up to 5 minutes."],
+            ["How will I receive the book?", "The book is only available as a printed copy — there is no digital or ebook edition. After ordering, you'll provide your delivery address and the book is dispatched within 2–3 business days."],
             ["Can I pay using M-Pesa?", "Yes. At checkout you can select M-Pesa and receive a payment prompt (STK push) directly on your phone."],
             ["Is this book required for The Rise Collective?", "Yes. All Rise Collective participants are required to own a copy as the shared foundation for the programme's discussions and activities."],
-            ["How does physical delivery work?", "Delivery within Nairobi CBD is free. Outside CBD, delivery is arranged after purchase. Orders dispatch within 2–3 business days."],
+            ["How does delivery work?", "Delivery within Nairobi is free. Outside Nairobi, a KES 300 delivery charge applies. You'll be asked for your full delivery address when placing your order."],
           ].map(([q, a]) => (
             <details key={q} className="group py-4">
               <summary className="flex cursor-pointer items-center justify-between gap-4 text-cream">
